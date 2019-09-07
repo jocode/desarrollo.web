@@ -5,92 +5,150 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Portafolio</title>
+  <title>Portafolio Johan Mosquera</title>
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
+  <link rel="shortcut icon" href="assets/favicon.png" />
 </head>
 
 <body>
 
   <header class="header">
-    <div>
-      <figure class="logo">
-        <img src="http://lorempixel.com/200/100/" alt="Logotipo">
-      </figure>
+
+    <div class="container">
+      <!-- <figure class="logo">
+        <img src="http://lorempixel.com/300/100/" alt="Logotipo" height="50">
+      </figure> -->
+      <a href="/">
+          <strong class="me">Johan Mosquera</strong>
+      </a>
       <nav class="menu">
-        <ul>
+        <ol>
           <li><a href="#portafolio">Portafolio</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#eventos">Experiencia</a></li>
           <li><a href="#contacto">Trabajemos juntos</a></li>
-          </ol>
+        </ol>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <h1>
-      Hola Soy Johan Mosquera <br />
-      <strong>Desarrollador</strong> con <strong>Javascript</strong>
-    </h1>
+    <div class="container">
+      <h1>
+        Hola Soy Johan Mosquera <br />
+        <strong>Desarrollador</strong> y me encanta la <strong>tecnología</strong>
+      </h1>
+      <img class="hero-image" src="assets/nature2.jpeg" width="500" height="300" alt="Imagen Hero">
+    </div>
   </section>
 
   <section id="portafolio" class="portfolio">
-    <h2>Portafolio (Proyectos detacados)</h2>
-    <article class="project">
-      <div class="project-detail">
-        <h3 class="project-title">Platzi Vídeo</h3>
-        <h6 class="project-course">React Native / React</h6>
-        <p class="project-date"><small><strong>Fecha</strong>: 05/09/2019</small></p>
-        <p class="project-url">
-          <strong>Puedes verlo en: </strong> www.platzi.com
-        </p>
-        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laboriosam
-          quasi. Velit facilis doloribus possimus saepe voluptas adipisci, beatae laudantium illo accusantium sequi
-          soluta libero similique consectetur quam aliquid fuga?</p>
-      </div>
-      <figure class="project-imageContainer">
-        <img class="project-image" src="http://lorempixel.com/500/600/" alt="Imagen" width="500">
-      </figure>
-    </article>
+    <div class="container">
+      <h2>Portafolio (Proyectos detacados)</h2>
+      <article class="project">
+        <div class="project-detail">
+          <h3 class="project-title">Platzi Vídeo</h3>
+          <h6 class="project-course">React Native / React</h6>
+          <p class="project-date"><small><strong>Fecha</strong>: 05/09/2019</small></p>
+          <p class="project-url">
+            <strong>Puedes verlo en: </strong> www.platzi.com
+          </p>
+          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laboriosam
+            quasi. Velit facilis doloribus possimus saepe voluptas adipisci, beatae laudantium illo accusantium sequi
+            soluta libero similique consectetur quam aliquid fuga?</p>
+        </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" src="./assets/platzi-video-react-native.png" alt="Imagen" width="500">
+        </figure>
+      </article>
 
-    <article class="project">
-      <div class="project-detail">
-        <h3 class="project-title">Platzi Vídeo</h3>
-        <h6 class="project-course">React Native / React</h6>
-        <p class="project-date"><small><strong>Fecha</strong>: 05/09/2019</small></p>
-        <p class="project-url">
-          <strong>Puedes verlo en: </strong> www.platzi.com
-        </p>
-        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laboriosam
-          quasi. Velit facilis doloribus possimus saepe voluptas adipisci, beatae laudantium illo accusantium sequi
-          soluta libero similique consectetur quam aliquid fuga?</p>
-      </div>
-      <figure class="project-imageContainer">
-        <img class="project-image" src="http://lorempixel.com/500/600/" width="500" alt="Imagen">
-      </figure>
-    </article>
+      <article class="project">
+        <div class="project-detail">
+          <h3 class="project-title">Platzi Vídeo</h3>
+          <h6 class="project-course">React Native / React</h6>
+          <p class="project-date"><small><strong>Fecha</strong>: 05/09/2019</small></p>
+          <p class="project-url">
+            <strong>Puedes verlo en: </strong> www.platzi.com
+          </p>
+          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laboriosam
+            quasi. Velit facilis doloribus possimus saepe voluptas adipisci, beatae laudantium illo accusantium sequi
+            soluta libero similique consectetur quam aliquid fuga?</p>
+        </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" src="./assets/platzi-video-react-native.png" width="500" alt="Imagen">
+        </figure>
+      </article>
+    </div>
   </section>
 
-  <section id="experiencia">
-    <h2>Más sobre mi Experiencia</h2>
-    <article class="event">
-      <figure class="event-imageContainer">
-        <img src="http://lorempixel.com/400/400/" class="event-image" />
-      </figure>
-      <h3 class="event-title">Developer Circles</h3>
-      <p class="event-description">Miembro del grupo Developer Circles de Facebook</p>
-      <a class="event-url" href="#" target="_blank">Ver evento</a>
-    </article>
+  <section id="eventos"">
+    <div class=" container">
+    <h2 class="event-title">Más sobre mi Experiencia</h2>
+
+    <div class="event-list">
+      <article class="event">
+        <figure class="event-imageContainer">
+          <img src="assets/people.jpeg" class="event-image" />
+        </figure>
+        <div class="event-detail">
+          <h3 class="event-title">Developer Circles</h3>
+          <p class="event-description">Miembro del grupo Developer Circles de Facebook</p>
+          <a class="event-url" href="#" target="_blank">Ver evento</a>
+        </div>
+      </article>
+      <article class="event">
+        <figure class="event-imageContainer">
+          <img src="http://lorempixel.com/400/400/people" class="event-image" />
+        </figure>
+        <div class="event-detail">
+          <h3 class="event-title">Developer Circles</h3>
+          <p class="event-description">Miembro del grupo Developer Circles de Facebook</p>
+          <a class="event-url" href="#" target="_blank">Ver evento</a>
+        </div>
+      </article>
+      <article class="event">
+        <figure class="event-imageContainer">
+          <img src="http://lorempixel.com/400/400/people" class="event-image" />
+        </figure>
+        <div class="event-detail">
+          <h3 class="event-title">Developer Circles</h3>
+          <p class="event-description">Miembro del grupo Developer Circles de Facebook</p>
+          <a class="event-url" href="#" target="_blank">Ver evento</a>
+        </div>
+      </article>
+    </div>
+    </div>
+
   </section>
 
   <section id="contacto" class="contact">
-    <form action="/suscripcion/" class="form-email">
-      <h3>¿Creamos algo juntos?</h3>
-      <input type="email" placeholder="Déjame tu email" />
-      <input type="submit" name="Enviar" id="email">
-    </form>
+    <div class="container">
+      <form action="#" class="form-email">
+        <h3>¿Creamos algo juntos?</h3>
+        <input type="email" placeholder="Déjame tu email" />
+        <button id="enviar">Enviar</button>
+      </form>
+      <div class="social">
+        <a href="#" class="social-link twitter"></a>
+        <a href="#" class="social-link facebook"></a>
+        <a href="#" class="social-link github"></a>
+        <a href="#" class="social-link instagram"></a>
+      </div>
+    </div>
   </section>
-  <footer class="footer">Footer</footer>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <p>Desarrollo web by
+          <strong>JOCODE</strong>
+        </p>
+      </div>
+      <div>
+        <p>Diseñado by <a href="#">@spianartist</a></p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

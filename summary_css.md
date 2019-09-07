@@ -103,3 +103,101 @@ Cuando hay dos márgenes de elementos diferentes que colindan entre sí, se pres
 Se puede asignar una medida de margin para los cuatro lados del elemento, o márgenes individuales para cada uno de los lados con: margin-top, margin-right, margin-bottom y margin-left.
 
 Se puede centrar un elemento html colocándole el valor de **margin: 0 auto**, cuando dicho elemento tiene display block.
+
+## Rellenos
+
+Así como el margen separa a los elementos html entre sí, la propiedad **padding** de relleno, permite definir una separación entre el contenido interno y el *borde* de un elemento.
+
+Al inspeccionar los elementos html en el navegador, se puede apreciar el margin con color naranja y el padding con color verde.
+
+Una forma de identificar cuándo es mejor usar margin o padding en un elemento, es evaluando la necesidad de usar borde o background, ya que son éstos: el borde y el background, los que realmente diferencian el uso de uno u otro.
+
+
+## Modelo de caja
+
+*Todo en css es una caja*
+
+El modelo de caja es un concepto teórico de css que representa a cada elemento html en base sus propiedades de: **margin, border, padding y dimensiones (alto y ancho)**.
+Para visualizar un elemento html en su representación como modelo de caja debemos irnos a la parte baja de la sección styles del **inspector de elementos**, o en la sección llamada **Computed**.
+
+En el modelo de caja, el **ancho total** de un *elemento html* equivale a la sumatoria de los valores de: **width, padding-left, padding-right, border-left-width, border-right-width**. De manera similar aplica para el **alto total** de *cada elemento*. Aunque **_margin-left y margin-right, forman parte del modelo de caja, no se incluyen para el calculo del ancho total_**.
+
+Con la propiedad **box-sizing**, y en particular con el valor **border-box** de esta propiedad, podemos modificar el comportamiento del modelo de caja para que nuestro elemento nunca supere el tamaño máximo que le hayamos definido en **width y height**. 
+
+
+## Tipos de display
+
+Display es la propiedad de css que indica cómo debe ser mostrado un elemento html. Todos los elementos tienen algún tipo de display. Si un elemento no se ve en pantalla es porque segurmanete su display es none.
+
+Los valores más comunes que puede recibir la propiedad display son:
+
+- **block**: el elemento intenta abarcar todo el ancho posible.
+- **inline**: reduce su tamaño exclusivamente hasta lo que abarca su contenido, descartando las propiedades width y height.
+- **inline-block**: combina lo mejor de block e inline, ya que respeta las dimensiones indicadas en las propiedades width y height, pero coloca el elemento en línea (al costado) de elementos hermanos que también tengan display: inline o inline-block.
+- **flex**: asume algunas propiedades por defecto que favorecen la alineación de los elementos internos.
+- **grid**: similar a flex, asume algunas propiedades por defecto organizando los contenidos en filas y columnas.
+- **none**: oculta el elemento.
+
+
+## Propiedades de flexbox
+
+Flexbox se refiere al tipo de **display** en css que permite un manejo **flexible** de la alineación, dimensionamiento y distribución de elementos html.
+
+Esta propiedad se aplica a un elemento padre, pero va a afectar principalmente a sus elementos hijos directos. Por defecto, los elementos internos quedan alineados unos seguidos de los otros. El comportamiento del modelo de caja de estos elementos hijos también se ha modificado, ya que pierden el efecto de su propiedad margin.
+
+Los elementos hijos de un padre con propiedad **display: flex** tienen a su disposición algunas nuevas propiedades que aportan mayor flexibilidad a su comportamiento. Una de estas propiedades es **flex-shrink** que, junto a la propiedad **flex-wrap** del padre, permite adaptar y distribuir los elementos de manera dinámica en el espacio horizontal disponible hasta ocupar todo el espacio, y luego pasar a ocupar dinamicamente las siguiente filas hacia abajo.
+
+**_Recursos para practicar flexbox_**
+
+- [Flexbox cheatsheet](https://darekkay.com/dev/flexbox-cheatsheet.html)
+- [Flexbox Froggy](https://flexboxfroggy.com/#es)
+
+
+## Alineando elementos de forma horizontal
+
+La propiedad de css que nos permite definir la forma en que se alinearán o distribuirán los hijos de un elemento al que se le ha asignado un `display flex` es: **justify-content**. Y puede tomar entre otros valores, los siguientes:
+
+- **flex-start**: para alinear todos los elementos hacia el inicio del espacio disponible.
+- **flex-end**: para alinear todos los elementos hacia el final, a la derecha.
+- **center**: para alinear todos los elementos al centro del espacio disponible.
+- **space-between**: para distribuir los elementos con un espacio proporcional e igual entre ellos.
+- **space-evenly**: para distribuir los elementos con un espacio proporcional e igual entre ellos (incluyendo el primer y último elementos con respecto a los extremos del espacio disponible).
+- **space-around**: similar a space-evenly pero tanto en el primero como en el último elemento, el espacio hacia los extremos es la mitad del espacio usado entre los elementos.
+
+
+## Alineando elementos de forma vertical
+
+Similar a como sucede con `justify-content`, es posible alinear y distribuir los elementos internos en el espacio **vertical** disponible usando la propiedad **align-items**, que puede tomar también los valores de: **flex-start, flex-end y center**.
+
+Algo que es muy importante y se debe tener en cuenta a la hora de usar **align-items y justify-content** es que dependiendo de la propiedad **flex-direction** que se haya definido, el efecto de ambos se invierte, no en cuanto a sus elementos internos, sino en cuanto a si se debe usar uno u otro de manera vertical u horizontal.
+
+**_IMPORTANTE_**: Cuando la propiedad **flex-direction** se ha definido como **column**, la propiedad **justify-content** ya **no** va a **aplicar** sobre la alineación **horizontal**, **sino** sobre la **vertical**. Y **align-items** ya no aplicaría sobre la alineación **vertical** **sino** la **horizontal**. Se intercambian sus efectos.
+
+Para centrar completamente los elementos internos de manera vertical y horizontal en su elemento padre, debemos usar el valor **center** en ambas propiedades.
+
+
+## Estilizando nuestro website
+
+La maquetación del sitio web es el proceso que realizamos para plasmar un diseño usando las tecnologías web.
+
+## Estilos de la sección principal y de footer
+
+En la alineación de elementos internos, existen también propiedades equivalentes que nos permite alinear textos dentro de un contenedor, estas propiedades son: **text-align** y **vertical-align**.
+
+## Estilos sección de eventos
+
+Propiedades nuevas como **overflow, object-fit, position y z-index**.
+
+- **object-fit** Evita que una imagen se deforme al cambiar las dimensiones.
+
+- **overflow: hidden**  Oculta el contenido que se desborda del contenedor
+
+
+## Corrigiendo detalles
+
+En esta clase agregamos algunos **divs** a manera de contenedores para central todo el contenido de la página y le definiremos algunos estilos con la clase **.container**. Para resolver algunos detalles generados por la implementación de los contenedores, aplicaremos una solución un tanto creativa heredando varias propiedades de los elementos padre con el keyword **inherit**.
+
+Te propongo adicionalmente el reto de aplicar estilos adicionales para corregir algún otro detalle que hayas logrado identificar para completar la estilización de todos los elementos de nuestro portafolio.
+
+
+> Los bordes es una gran forma de depuración de estilos.
