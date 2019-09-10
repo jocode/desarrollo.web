@@ -61,6 +61,7 @@ figure {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header figure {
@@ -114,6 +115,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hero-image {
@@ -144,6 +146,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .project-title {
@@ -158,10 +161,6 @@ figure {
   margin: 10px 0;
 }
 
-.project-detail {
-  margin-right: 20px;
-}
-
 .project-description {
   font-size: 20px;
 }
@@ -170,12 +169,17 @@ figure {
   font-family: 'Fjalla One', sans-serif;
 }
 
-.project-details {
-  width: 500px;
+.project-detail {
+  width: 50%;
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
+}
+
+/*Hacer la imagenes responsive*/
+.project-imageContainer img {
+  max-width: 100%;
 }
 
 .flexbox {
@@ -202,6 +206,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer img {
@@ -231,8 +236,8 @@ h2.event-title {
 }
 
 .event {
-  margin: 10px;
-  width: 480px;
+  margin: 1%;
+  width: 48%;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -244,7 +249,7 @@ h2.event-title {
 }
 
 .event img {
-  width: inherit;
+  width: 480px;
   height: 200px;
   object-fit: cover;
 }
@@ -277,6 +282,7 @@ h2.event-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contact h3 {
@@ -352,7 +358,9 @@ Estos estilo son importantes a tenerlos en cuenta
 
 .container {
   /* border: 1px solid red; */
-  width: 1000px;
+  max-width: 1000px;
+  /* width: 100%; */
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -368,19 +376,156 @@ Cada media query se le denomina break points
 */
 
 @media screen and (max-width: 1024px){
-  
+  .container {
+    padding: 0 1em;
+  }
+
+  .hero {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+
+  .hero-image {
+    position: absolute;
+    /* El elemento se estira en todas sus direcciones */
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+    z-index: 2;
+  }
+
 }
 
-@media screen and (max-width: 768px){
-  body {
-    border: 10px solid green;
+/* Ipad */
+@media screen and (max-width: 767px){
+  .header {
+    display: block;
+    height: auto;
   }
+
+  .header ol {
+    display: initial;
+  }
+
+  .header ol li {
+    height: 50px;
+  }
+
+  .header a {
+    justify-content: center;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+
+  .project-detail {
+    width: auto;
+    /* font-size: 16px; */
+    /* font-size: calc(14px + (19 - 14) * ((100vw - 300px) / (1600 - 300))); */
+  }
+
+  .project-course,
+  .project-date,
+  .project-url {
+    margin: .3em 0;
+  }
+
+  .project-title {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+
+  .project-url {
+    font-size: 1em;
+  }
+
+  .project-course {
+    font-size: .7em;
+  }
+
+  .project-date {
+    font-size: 1em;
+  }
+
+  .project-description {
+    font-size: .8em;
+  }
+
+  .event {
+    width: auto;
+  }
+
+  .event img {
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 480px){
-  
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .project-detail {
+    font-size: 12px;
+  }
+
+  .event-detail {
+    /* 1em = 6px */
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+
+  .contact {
+    height: auto;
+    padding: 1em 0;
+    text-align: center;
+    display: block;
+  }
+
+  .form-email button {
+    margin: 1em auto;
+  }
+
+  .form-email h3 {
+    margin-top: 0;
+  }
+
+  .social {
+    padding: 1em 0;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent; /*Arreglo el margin collapsig*/
+  }
+
 }
 
 @media screen and (max-width: 320px){
-  
+  h1 {
+    font-size: 1.2em;
+    background: rgba(0,0,0,.5);
+  } 
+
+  .hero {
+    padding: 2em 1em;
+  }
 }
