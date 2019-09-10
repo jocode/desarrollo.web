@@ -360,3 +360,27 @@ Estos estilo son importantes a tenerlos en cuenta
   height: inherit;;
   flex-wrap: inherit;
 }
+
+/**
+Si haces Desktop First, empezar con el media query más grande
+
+Cada media query se le denomina break points
+*/
+
+@media screen and (max-width: 1024px){
+  
+}
+
+@media screen and (max-width: 768px){
+  body {
+    border: 10px solid green;
+  }
+}
+
+@media screen and (max-width: 480px){
+  
+}
+
+@media screen and (max-width: 320px){
+  
+}
