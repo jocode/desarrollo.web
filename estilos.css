@@ -452,7 +452,7 @@ Si haces Desktop First, empezar con el media query más grande
 Cada media query se le denomina break points
 */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
   .container {
     padding: 0 1em;
   }
@@ -530,6 +530,7 @@ Cada media query se le denomina break points
     display: flex;
     justify-items: center;
     justify-content: center;
+    transition: .3s;
   }
 
   .menu.is-active {

@@ -277,4 +277,91 @@ top, bottom, right, left y x-index
 
 ## Posicionando el menú
 
-Antes de que tu menú tenga elementos que permitan la interactividad, es necesario definir sus posiciones y ordenamientos desde tu editor de código. En esta clase definirás los tamaños de tu menú, de los textos y, especialmente, trabajarás sobre sus estilos. Estos estilos los irás comprobando en distintas opciones de visualización o tamaños de dispositivos, con el propósito de estar realizando un trabajo efectivo en cuanto al responsive design. No obstante, al finalizar verás que aun no tiene la posibilidad de aparecer y esconderse, según lo necesite tu usuario, por este motivo: te invitamos a ver la próxima clase en donde usarás elementos de javascript para brindarle otra experiencia, mucho más completa, a tus usuarios
+Antes de que tu menú tenga elementos que permitan la interactividad, es necesario definir sus posiciones y ordenamientos desde tu editor de código. En esta clase definirás los tamaños de tu menú, de los textos y, especialmente, trabajarás sobre sus estilos. Estos estilos los irás comprobando en distintas opciones de visualización o tamaños de dispositivos, con el propósito de estar realizando un trabajo efectivo en cuanto al responsive design. No obstante, al finalizar verás que aun no tiene la posibilidad de aparecer y esconderse, según lo necesite tu usuario, por este motivo: te invitamos a ver la próxima clase en donde usarás elementos de javascript para brindarle otra experiencia, mucho más completa, a tus usuarios.
+
+## Añadiendo Javascript para detección de eventos
+
+La interactividad que necesitarás para tu menú, se concentrará en algunas acciones, la primera de ellas es la que sucede al cliquear sobre el botón o el icono.
+
+Para lograr esto harás uso del lenguaje de programación JavaScript, recuerda que este lenguaje hace posible la codificación de experiencias interactivas en el desarrollo web (si te interesa, te recomendamos tomar el Curso de jQuery a JavaScript, y el curso de Fundamentos de JavaScript).
+
+Algunas de las instrucciones de JS que aplicarás serán, console.log, document.querySelector, classList, variables (const nombre =), burgerButton, EventListener, entre otras.
+
+
+## Media queries con JavaScript
+
+En esta clase aprenderás a implementar media queries con JavaScript, para esto usarás instrucciones como window.matchMedia, console.log -nuevamente-, event, entre otros.
+
+El propósito es que tu menú quede listo para ofrecer una experiencia interactiva y sea flexible en distintos dispositivos, es decir, que sea interactivo y responsivo.
+
+De forma adicional, aprenderás a agregar y quitar listeners de tus eventos, pues no siempre son la mejor opción en la experiencia de navegación.
+
+
+```js
+window.matchMedia('screen and (mac-switdth: 767px)');
+```
+
+Con **window.matchMedia** invocamos una función de la API del navegador, que nos permite hacer una consulta a los medios, en este caso para el media query que hemos dispuesto para el tamaño del del ipad.
+
+
+La funcionalidad que permite agregar la nteractividad al botón es la siguiente:
+
+```js
+const menu = document.querySelector('.menu');
+    const burgerButton = document.querySelector('#burguer-menu');
+
+    function hideShow(){
+      if (menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+      }
+      
+    }
+
+    const ipad = window.matchMedia('screen and (max-width: 767px)');
+
+    ipad.addListener(validacion);
+
+    function validacion(event){
+      if (event.matches){
+        burgerButton.addEventListener('click', hideShow);
+      } else {
+        burgerButton.removeEventListener('click', hideShow);
+      }
+    }
+```
+
+## Creando un servidor de archivos estáticos con Node
+
+En esta clase verás qué diferencias hay entre el navegador y la visualización del teléfono, a lo que se le conoce como remote debugging y de lo que aprenderás más adelante.
+
+Por ahora, aprenderás a realizar un servidor de archivos estáticos con Node, esto te permitirá contar con las herramientas necesarias para trabajar sobre el remote debugging en distintos dispositivos. Así que, en primer lugar vas a descargar el software de Node, que te permitirá crear los archivos estáticos.
+
+- [Static Server](https://www.npmjs.com/package/static-server)
+
+Para ello usamos el comando
+- Instalamos nodeJS y npm
+ - `npm -g install static-server`, Para instalar el módulo. Damos permisos de administrador **sudo** para _linux_ y _mac_
+- Vamos a la carpeta de nuestro proyecto
+- Ejecutamos el comando **`static-server`** (Apagamos el servidor con **ctrl + c**)
+- Buscamos la IP de la red local, viendo las propiedades de la conexión
+
+
+## Remote Debugging en iOS
+
+En este momento ya debes poder acceder a tu proyecto para depurarlo desde tu teléfono móvil.
+
+En esta clase vas a aprender a trabajar sobre el rendimiento de la interfaz que ves en la navegación, de esta manera, aprenderás a corregir bugs y trabajar desde el inspector de elementos de tu celular, ya que es posible que accedas a él y trabajes en él. Finalmente aprenderás a configurar el remote debugging para iOS.
+
+## Remote Debugging en Android y puliendo últimos detalles
+
+Así como aprendiste a configurar el remote debugging para iOS, en esta clase aprenderás a configurarlo para dispositivos Android. Para aprender a hacerlo, debes tener conectado tu teléfono a tu computador vía usb y activar el menú de desarrollador -el cual se encuentra en la configuración-; al activarlo debe aparecer un menú adicional desde el cual podrás utilizar el inspector de elementos en tu computador, desde el explorador que tengas (que para esta ocasión será Google Chrome). Desde este lugar podrás modificar los diversos elementos de tu proyecto, aplicando las herramientas y conocimientos que ya dominas hasta el momento. Por último, ¡pulirás los detalles finales de tu proyecto!
+
+
+- Para depurar en Android, debemos seguir los siguientes pasos.
+  - Activar las opciones de desarrollador en android
+  - Aceptar la vinculación del teléfono con la computadora.
+  - Acceder a la ruta `chrome://inspect` en **chrome**
+  - Ver el dispositivo, verificar el sitio wen y realizar las modificaciones requeridas
+
