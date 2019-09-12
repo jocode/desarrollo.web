@@ -219,3 +219,62 @@ Cuando asignamos un valor a la propiedad position que no sea **static** (**por d
 - **fixed**: Se queda fijo en un lugar especifico del viewport que se le indique.
 
 - **sticky**: Permanece en un lugar asignado y cuando se hace scroll se queda fijo en un lugar en especifico hasta que se haga scroll contrario.
+
+
+## Añadiendo características dedicadas a pantallas pequeñas
+
+### Videos HTML5
+
+Como sabes, los videos son contenidos cada vez más comunes e incluso necesarios en las web sites.
+
+Por esta razón, en esta clase aprenderás a incluir un video en tu proyecto y, por lo tanto, lo modificarás para convertirlo en un material responsivo, es decir, que sea coherente con tu trabajo de Responsive Design.
+
+Para aprender esto es necesario que elijas cualquier video que tengas en su formato original y sigas las indicaciones que tu profesor, Leonidas Esteban, realizará a lo largo de la clase.
+
+Las dos foras de insertar un vídeo en 
+- Vídeo en HTML
+- Vídeo insertado
+
+Ver más en [Usando audio y video con HTML5](https://developer.mozilla.org/es/docs/Web/HTML/Usando_audio_y_video_con_HTML5)
+
+
+### Video insertado
+
+En esta clase aprenderás a implementar videos responsive en tu proyecto, originarios o alojados en otras plataformas (como youtube y/o vimeo). Por este motivo trabajarás con la etiqueta iframe.
+
+Ésta etiqueta hará posible que el video que insertes tenga la posibilidad de adaptarse a distintas formas de visualización, aunque, a pesar de ellas, aprenderás cuáles son las diferencias entre usar un video inserto y hacerlo desde html5.
+
+- **iframe** La etiqueta permite insertar contenido desde cualquier website al nuestro.
+
+- **Para video en relación 19:9**
+`height*100/width`
+
+Para vídeo **vertical** se hace
+`width*100/height`
+
+
+### Fuentes de iconos
+
+Para íconos personalizados podemos traerlos desde IcoMoon.io
+
+Todo menú necesita de la presencia de iconos, por este motivo, en esta clase aprenderás sobre las fuentes de iconos y las aplicarás en la realización del menú de tu proyecto.
+
+En este abordaje a las fuentes de iconos, conocerás la plataforma icomoon.io, en ella podrás importar o añadir familias de iconos, desde tu computador o desde el sistema.
+
+Posteriormente, llevarás los archivos que selecciones a tu editor de código, allí trabajarás sobre ellos con la etiqueta @font- face, que acogerá a otros atributos como font- family, font- style y font- weigth, font- variant, entre otras.
+
+El **tag** `<i></i>` se recomienda para insertar íconos
+
+
+### Añadiendo un menú de hamburguesa
+
+En esta clase convertirás el ícono que has elegido según las fuentes de íconos y le destinarás una función, es decir, le adjudicarás un “call to action” o llamado a la acción. Así, tu usuario sabrá cómo relacionar el ícono a la función que necesita realizar. En conclusión, durante la clase, Leonidas te enseñará diversas técnicas para desarrollar tu menú de hamburguesa o menú desplegable de múltiples opciones, en la página web que estas desarrollando, en estas formas trabajarás sobre las medidas, los colores, el background color, el borde, el display y, algo fundamental, las posiciones de css que ya aprendiste en la clase correspondiente a este tema.
+
+- ¿Qué propiedad se desbloquea luego de asignar un position diferente de static en un elemento?
+
+top, bottom, right, left y x-index
+
+
+## Posicionando el menú
+
+Antes de que tu menú tenga elementos que permitan la interactividad, es necesario definir sus posiciones y ordenamientos desde tu editor de código. En esta clase definirás los tamaños de tu menú, de los textos y, especialmente, trabajarás sobre sus estilos. Estos estilos los irás comprobando en distintas opciones de visualización o tamaños de dispositivos, con el propósito de estar realizando un trabajo efectivo en cuanto al responsive design. No obstante, al finalizar verás que aun no tiene la posibilidad de aparecer y esconderse, según lo necesite tu usuario, por este motivo: te invitamos a ver la próxima clase en donde usarás elementos de javascript para brindarle otra experiencia, mucho más completa, a tus usuarios
