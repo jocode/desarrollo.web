@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Modelo de caja, manteniendo al ancho y alto absoluto 
+  1 rem = 16px
+  */
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.header {
+  outline: 1px dashed lime;
+  height: 4rem;
+}
+
+.container {
+  outline: 1px dashed rebeccapurple;
+  display: flex;
+  height: 100%;
+  text-align: center;
+}
+
+.content {
+  outline: 1px dashed red;
+  /*flex-grow flex-shrink flex-basis*/
+  flex-grow: 1; /*El elemento va a ocupar todo el espacio disponible*/
+  align-self: center;
+}
+
+.aside {
+  outline: 1px dashed blue;
+  flex-basis: 30%; /* El elemento ocupará el 30% del contenido*/
+  align-self: center;
+}
+
+
+.footer {
+  outline: 1px dashed royalblue;
+  margin-top: auto; /*Truco para posicionar el footer al final*/
+  padding: 10px 0;
+  text-align: center;
+  background-color: darkorange;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  height: inherit;
+  background-color: darkorange;
+}
+
+.menu-item {
+  list-style: none;
+  font-style: italic;
+  font-weight: bold;
+  color: cornsilk;
+  font-size: 1.5em;
+  line-height: 4rem; /* Centramos el texto verticalmente usando la mimsa altura del elemento padre. Si el texto ocupa más de 2 lineas no funciona */
+  flex: 1;
+  text-align: center;
+  transition: flex 0.5s ease-in-out;
+}
+
+.menu-item:hover {
+  flex: 6;
+  font-size: 2em;
+  background-color: orangered;
+  color: antiquewhite;
+}
